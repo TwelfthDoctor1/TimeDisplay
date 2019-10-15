@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<script>
+		function startTime() {
+  			var today = new Date();
+  			var h = today.getHours();
+  			var m = today.getMinutes();
+  			var s = today.getSeconds();
+  			m = checkTime(m);
+  			s = checkTime(s);
+  			document.getElementById('txt').innerHTML =
+  			h + ":" + m + ":" + s;
+  			var t = setTimeout(startTime, 500);
+}
+		function checkTime(i) {
+  			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  			return i;
+}
+	</script>
+<meta charset="utf-8">
+<title>TimePage</title>
+</head>
+
+<body onload="startTime()">
+	<p align="center"><font size="30" face="P22 Underground DemiBold">TimeDisplay</font></p>
+	
+	<hr width="100%" align="center">
+	
+	<h1 align="center"><font face="P22 Underground DemiBold">For Internal Use Only As For Testing Purposes</font></h1>
+	<p align="center"><font face="P22 Underground DemiBold">Version 1.0 Work In Progress</font></p>
+	
+	<font size="100" face="P22 Underground DemiBold"><h1 align="center"><div id="txt"></div></h1></font>
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr>
+	<h6 align="center"><font size="3" face="P22 Underground DemiBold">Designed By TwelfthDoctor1 With Help From Various Sources</font></h6>
+	
+</body>
+</html>
