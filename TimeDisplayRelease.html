@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<script>
+		function startTime() {
+  			var today = new Date();
+  			var h = today.getHours();
+  			var m = today.getMinutes();
+  			var s = today.getSeconds();
+  			m = checkTime(m);
+  			s = checkTime(s);
+  			document.getElementById('txt').innerHTML =
+  			h + ":" + m + ":" + s;
+  			var t = setTimeout(startTime, 500);
+}
+		function checkTime(i) {
+  			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  			return i;
+}
+	  
+	</script>
+<meta charset="utf-8">
+<style>
+	@font-face {
+		font-family: P22 Underground;
+		src:url("fonts/P22 Underground.otf")
+	}
+	body, html {
+		background-color: black;
+		height: 100%;
+		width: 100%;
+		position: relative;
+		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+	
+	h1 {
+		border: 2px solid white;
+  		border-radius: 100px;
+		margin: 50px 450px 
+	}
+</style>
+<title>TimePage</title>
+</head>
+
+<body onload="startTime()">
+	<div class="bg">
+	<p align="center"><font color="#FFFFFF" size="30" face="P22 Underground">TimeDisplay</font></p>
+	
+	<hr width="100%" align="center">
+	
+	<h2 align="center"><font color="#FFFFFF" face="P22 Underground">For Internal Use Only As For Testing Purposes</font></h2>
+	<p align="center"><font color="#FFFFFF" face="P22 Underground">Version 1.1 Work In Progress</font></p>
+	
+	<font color="#FFFFFF" size="100" face="P22 Underground"><h1 align="center"><div id="txt"></div></h1></font>
+	<font color="#FFFFFF" size="50" face="P22 Underground"><h5 align="center"><script>
+		  var myDate = new Date();
+		  var hrs = myDate.getHours();
+		  var Name = 'TwelfthDoctor1' // <- Insert Name Into Variable;
+		  var greet;
+
+		  if (hrs < 5)
+			greet = 'Good Night';
+		  else if (hrs >= 5 && hrs <= 11)
+			greet = 'Good Morning'
+		  else if (hrs >= 12 && hrs <= 16)
+			greet = 'Good Afternoon';
+		  else if (hrs >= 17 && hrs <= 20)
+			greet = 'Good Evening';
+		  else if (hrs >= 21 && hrs <= 24)
+			greet = 'Good Night';
+		  
+		  document.write('<b>'+ greet +', '+Name+'</b>');
+
+	  </script></h5></font>
+	<hr>
+	<h6 align="center"><font color="#FFFFFF" size="3" face="P22 Underground">Designed By TwelfthDoctor1 With Help From Various Sources</font></h6>
+	</div>
+</body>
+</html>
