@@ -17,3 +17,7 @@ The base item. For everyone to use.
 # Editing
 
 Users can edit the code to their hearts content. So as long they don't re-upload the original.
+
+# Downloads
+
+Click [here](https://github.com/TwelfthDoctor1/TimeDisplay/releases) to access the releases page.
